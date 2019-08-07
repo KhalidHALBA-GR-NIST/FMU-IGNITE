@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<fmiModelDescription
+  fmiVersion="1.0"
+  modelName="drivecycle"
+  modelIdentifier="drivecycle"
+  guid="{8c4e810f-3df3-4a00-8276-176fa3c9f008}"
+  numberOfContinuousStates="0"
+  numberOfEventIndicators="0">
+<ModelVariables>
+  <ScalarVariable name="cycle_speed_kmph" valueReference="0" description="speed in mph" causality = "output">
+     <Real start="0" fixed="false"/>
+  </ScalarVariable>
+    <ScalarVariable name="cycle_speed_ahead_kmph" valueReference="1" description="speed in mph" causality = "output">
+     <Real start="0" fixed="false"/>
+  </ScalarVariable>
+    <ScalarVariable name="cycle_time" valueReference="2" description="timesteps in seconds" causality = "input">
+     <Real start="0" fixed="false"/>
+  </ScalarVariable>
+    <ScalarVariable name="cycle_time_ahead" valueReference="3" description="timesteps in seconds" causality = "input">
+     <Real start="0" fixed="false"/>
+  </ScalarVariable>
+    <ScalarVariable name="counter" valueReference="4" description="counts the seconds" causality = "internal">
+     <Integer start="1" fixed="true"/>
+  </ScalarVariable>
+</ModelVariables>
