@@ -29,7 +29,7 @@ void setStartValues(ModelInstance *comp) {
     r(cycle_time_) = 0;
     r(cycle_speed_ahead_kmph_) = 0;
     r(cycle_time_ahead_) = 0;
-    i(counter_) = 1;
+    i(counter_) = 0;
 }
 fmiReal getReal(ModelInstance* comp, fmiValueReference vr){
     switch (vr) {
@@ -45,7 +45,6 @@ void initialize(ModelInstance* comp, fmiEventInfo* eventInfo) {
     eventInfo->nextEventTime       = 1 + comp->time;
 }
 void eventUpdate(ModelInstance* comp, fmiEventInfo* eventInfo) {
-
 
 
 SOCKET s;
@@ -107,7 +106,7 @@ SOCKET s;
 
 
 
-	while( i(counter_)<2000)
+	while(1)
 	{
 		// printf("Waiting for data...");
 		fflush(stdout);
